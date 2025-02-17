@@ -1,7 +1,7 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
 
 //1 Generamos una lista para almacenar los nombres ingresados
-let listamigos=[];
+let listaAmigos=[];
 
 //2 Creamos una función para agregar los nombres  a la lista por medio del DOM
 function agregarAmigo(){
@@ -12,5 +12,8 @@ function agregarAmigo(){
         alert("Por favor, ingresa un nombre valido.");
         return;
     }
+    listaAmigos.push(nombre); //agregamos los nombres a la lista con push
+    input.value=""; //Limpia el campo de entrada
+    mostrarLista(); // actualizar la lista en la pantalla
 }
 
