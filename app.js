@@ -23,10 +23,25 @@ function mostrarLista(){
     let ul=document.getElementById("listaAmigos");
     ul.innerHTML=""; // limpia la lista antes de actualizarla
 
-    for (let i=0; i<listaAmigos;i++){
+    for (let i=0; i<listaAmigos.length;i++){
         let li=document.createElement("li"); // crea un elemento li
         li.textContent=listaAmigos[i]; // Esta proiedad asigna el nombre al <li>
         ul.appendChild(li); // agrega el li dendro del ul, appenChild agrega un nodo hijo.
 
     }
+}
+
+// 4 Creamos una función para sortear el amigo secreto
+
+function sortearAmigo(){
+    if (listaAmigos.length ===0){
+        alert ("Por favor, agrega un nombre antes de sortear.");
+        return;
+    }
+
+    let indiceAzar= Math.floor(Math.random() * listaAmigos.length);
+    let amigoSeleccionado=listaAmigos[indiceAzar];
+
+    let resultado=document.getElementById("resultado");
+    resultado.innerHTML= `El amigo secreto es: ${amigoSeleccionado}`;
 }
