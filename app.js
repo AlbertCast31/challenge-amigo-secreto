@@ -17,3 +17,16 @@ function agregarAmigo(){
     mostrarLista(); // actualizar la lista en la pantalla
 }
 
+//3 Creamos una función para mostrar la lista de amigos
+
+function mostrarLista(){
+    let ul=document.getElementById("listaAmigos");
+    ul.innerHTML=""; // limpia la lista antes de actualizarla
+
+    for (let i=0; i<listaAmigos;i++){
+        let li=document.createElement("li"); // crea un elemento li
+        li.textContent=listaAmigos[i]; // Esta proiedad asigna el nombre al <li>
+        ul.appendChild(li); // agrega el li dendro del ul, appenChild agrega un nodo hijo.
+
+    }
+}
